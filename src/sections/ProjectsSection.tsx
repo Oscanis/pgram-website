@@ -3,18 +3,40 @@ import ProjectCard from '../components/ProjectCard';
 
 const ProjectsSection = () => {
   return (
-    <div id="projects" className='w-full lg:h-screen p-2 flex flex-col justify-center'>
-        <div className='w-full max-w-[1240px] mx-auto'>
-            <h2 className='px-3 pb-6'>Projects</h2>
+    <div id="projects" className='content-wrapper p-2 mt-12 flex flex-col justify-center'>
+        <div className='content-container'>
+            <h2 className='px-3 pb-6'>Partners and Projects</h2>
         </div>
-        <div className='w-full max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8'>
+        <div className='content-container flex flex-wrap justify-center lg:justify-start items-center gap-4'>
 
             <ProjectCard
-                cardTitle='HELLO'
-                cardDetails='This will be the description'
-                imgUrl='/assets/analytics-925379_1920.jpg'
-                targetUrl='/'
+                cardTitle='PGram'
+                cardDetails='Website'
+                imgUrl='/assets/pgram-cover.png'
+                targetUrl='/projects/pgram'
             />
+
+            <ProjectCard
+                cardTitle='Dőry Wedding'
+                cardDetails='Website'
+                imgUrl='/assets/dory-cover.png'
+                targetUrl='/projects/dory'
+            />
+
+            <ProjectCard
+                cardTitle='Vagrus'
+                cardDetails='Video & trailers'
+                imgUrl='/assets/vagrus-cover.png'
+                targetUrl='/projects/vagrus'
+            />
+
+            <ProjectCard
+                cardTitle='Marseus Webshop'
+                cardDetails='Website'
+                imgUrl='/assets/marseus-cover.png'
+                targetUrl='/projects/marseus'
+            />
+
         </div>
     </div>
   )

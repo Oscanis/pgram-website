@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import SocialLinks from './SocialLinks';
+import { useRouter } from 'next/router';
 
 const navbarLinks = [
     {
+        key: 1,
         name: 'Home',
         url: '/',
     },
     {
+        key: 2,
         name: 'About',
         url: '#about',
     },
     {
+        key: 3,
         name: 'Skills',
         url: '#skills',
     },
     {
+        key: 4,
         name: 'Projects',
         url: '#projects',
     },
     {
+        key: 5,
         name: 'Contact',
         url: '#contact',
     },
@@ -29,21 +35,58 @@ const navbarLinks = [
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [shadow, setShadow] = useState(false);
+    const [navBg, setNavBg] = useState('bg-gray-200');
+    const [linkColor, setLinkColor] = useState('text-white');
+    const [logo, setLogo] = useState('/assets/PGramLogov2.png');
+    const router = useRouter();
+
+    useEffect(() => {
+        const handleShadow = () => {
+            if(window.scrollY >= 90) {
+                setShadow(true);
+            }
+            else setShadow(false);
+        }
+
+        window.addEventListener('scroll', handleShadow);
+    }, [])
+
+    useEffect(() => {
+        if(router.asPath.includes('/projects')) {
+            setNavBg('bg-transparent');
+            setLinkColor('text-gray-200');
+            setLogo('/assets/PGramLogov2Black.png');
+        }
+        else {
+            setNavBg('bg-gray-200');
+            setLinkColor('text-gray-700');
+            setLogo('/assets/PGramLogov2.png');
+        }
+
+    }, [router]);
 
     const handleNav = () => {
         setNav(!nav);
     }
 
+    const navbarStyle: string = 'fixed w-full h-20 z-[100] px-4 ';
+
     return (
-    <div className='fixed w-full h-20 shadow-xl bg-gray-200 z-50'>
+    <div
+        className={
+            shadow ?
+            navbarStyle.concat('shadow-xl ',  navBg, ' ', linkColor) :
+            navbarStyle.concat(navBg, ' ', linkColor)
+        }>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-            <Image src='/assets/PGramLogov2.png' alt='' width='150' height='100' />
+            <Image src={logo} alt='' width='150' height='100' />
             <div>
                 <ul className='hidden md:flex'>
                     {navbarLinks.map(link => {
                         return (
-                            <Link href={link.url}>
-                                <li className='ml-10 text-sm uppercase box-border border-b hover:border-b-[#333] ease-in duration-100'>{link.name}</li>
+                            <Link key={link.key} href={link.url}>
+                                <li className='ml-10 text-sm uppercase box-border border-b border-b-transparent hover:border-b-orange-500 ease-in duration-100'>{link.name}</li>
                             </Link>
                         );
                     })}
@@ -62,7 +105,7 @@ const Navbar = () => {
                 }
             >
                 <div className='flex w-full items-center justify-between'>
-                    <Image src='/assets/PGramLogov2.png' alt='/' width='120' height='80'/>
+                    <Image src={logo} alt='/' width='120' height='80'/>
                     <div onClick={handleNav} className='rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-100'>
                         <AiOutlineClose />
                     </div>
@@ -74,8 +117,8 @@ const Navbar = () => {
                     <ul>
                         {navbarLinks.map(link => {
                             return (
-                                <Link href={link.url}>
-                                    <li className='uppercase py-4 text-sm'>{link.name}</li>
+                                <Link key={link.key} href={link.url}>
+                                    <li className='uppercase py-4 text-sm' onClick={() => setNav(false)}>{link.name}</li>
                                 </Link>
                             );
                         })}

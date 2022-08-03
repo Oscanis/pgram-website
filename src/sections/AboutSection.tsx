@@ -3,8 +3,8 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <div id="about" className='w-full md:h-screen flex items-center px-3 py-16'>
-        <div className='max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8'>
+    <div id="about" className='content-wrapper flex items-center px-3 py-16'>
+        <div className='content-container lg:grid grid-cols-3 gap-8'>
             <div className='col-span-2'>
                 <h2 className='px-3 pb-6'>About Me</h2>
                 <p className='px-3'>
