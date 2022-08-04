@@ -9,7 +9,7 @@ const title: string = 'Portfolio Page';
 const subtitle: string = 'Next.js / Tailwind';
 const description: string = 'This page was built as a portfolio, but also as a demo for Next.js and Tailwind';
 const siteUrl: string = '';
-const githubUrl: string = 'https://pgram.hu';
+const githubUrl: string = 'https://github.com/Oscanis/pgram-website';
 
 const ProjectView = () => {
   return (

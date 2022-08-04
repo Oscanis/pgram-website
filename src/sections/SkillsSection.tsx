@@ -11,7 +11,7 @@ import {
     SiTypescript,
     SiPostgresql,
     SiTrello,
-    SiFigma,
+    SiMongodb,
     SiAdobephotoshop,
     SiTailwindcss,
     SiPostman
@@ -59,6 +59,10 @@ const SkillsSection = () => {
                 <SiPostgresql className='w-10 h-10' />
             </SkillCard>
 
+            <SkillCard cardText='MongoDB'>
+                <SiMongodb className='w-10 h-10' />
+            </SkillCard>
+
             <SkillCard cardText='Postman'>
                 <SiPostman className='w-10 h-10' />
             </SkillCard>
@@ -73,10 +77,6 @@ const SkillsSection = () => {
 
             <SkillCard cardText='Trello'>
                 <SiTrello className='w-10 h-10' />
-            </SkillCard>
-
-            <SkillCard cardText='Figma'>
-                <SiFigma className='w-10 h-10' />
             </SkillCard>
 
             <SkillCard cardText='Photoshop'>

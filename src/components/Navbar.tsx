@@ -14,22 +14,22 @@ const navbarLinks = [
     {
         key: 2,
         name: 'About',
-        url: '#about',
+        url: '/#about',
     },
     {
         key: 3,
         name: 'Skills',
-        url: '#skills',
+        url: '/#skills',
     },
     {
         key: 4,
         name: 'Projects',
-        url: '#projects',
+        url: '/#projects',
     },
     {
         key: 5,
         name: 'Contact',
-        url: '#contact',
+        url: '/#contact',
     },
 ]
 

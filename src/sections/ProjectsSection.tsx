@@ -37,6 +37,13 @@ const ProjectsSection = () => {
                 targetUrl='/projects/marseus'
             />
 
+            <ProjectCard
+                cardTitle='SquareIT!'
+                cardDetails='Demo game'
+                imgUrl='/assets/squareit-cover.png'
+                targetUrl='/projects/squareit'
+            />
+
         </div>
     </div>
   )
