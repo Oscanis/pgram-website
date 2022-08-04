@@ -21,7 +21,7 @@ import { FaVideo, FaWordpress } from 'react-icons/fa';
 
 const SkillsSection = () => {
   return (
-    <div id="skills" className='content-wrapper p-2 mt-12 flex flex-col justify-center'>
+    <div id="skills" className='content-wrapper p-4 mt-12 flex flex-col justify-center'>
         <div className='content-container'>
             <h2 className='px-3 pb-6'>Skills</h2>
         </div>

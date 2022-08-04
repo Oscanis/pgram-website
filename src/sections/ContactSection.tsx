@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import SocialLinks from '../components/SocialLinks';
 import ContactForm from '../components/ContactForm';
 import ContactDetails from '../components/ContactDetails';
 
 const ContactSection = () => {
   return (
-    <div id="contact" className='content-wrapper p-2 mt-12 flex flex-col justify-center'>
+    <div id="contact" className='content-wrapper p-4 mt-12 flex flex-col justify-center'>
       <div className='content-container'>
         <h2 className='px-3 pb-6'>Contact</h2>
        
@@ -14,11 +15,11 @@ const ContactSection = () => {
 
             <div className='lg:p-4 h-full'>
               <div className='w-full flex flex-col justify-center items-center'>
-                <img src="/assets/contact-email-envelope.png" alt="" className='h-auto w-[50%] rounded-xl hover:scale-105 ease-in duration-300'/>
+                <Image src="/assets/contact-email-envelope.png" alt="" height="150%" width="150%" className='rounded-xl hover:scale-105 ease-in duration-300'/>
                 <h2>Peter Makai</h2>
                 <h3>@ PGram</h3>
                 <p>Fullstack Developer</p>
-                <p className='py-4 text-center'>I'm available for freelance or full-time positions. Contact me and let's talk.</p>
+                <p className='py-4 text-center'>I&apos;m available for freelance or full-time positions. Contact me and let&apos;s talk.</p>
                 <SocialLinks />
                 </div>
             </div>

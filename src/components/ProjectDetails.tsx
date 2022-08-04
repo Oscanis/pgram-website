@@ -19,7 +19,7 @@ const ProjectDetails: React.FC<Props> = ({coverImg, title, subtitle, description
         <div className='w-full'>
         <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
             <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10' />
-            <Image className='absolute z-1' layout='fill' objectFit='cover' src={coverImg} />
+            <Image className='absolute z-1' layout='fill' objectFit='cover' src={coverImg} alt=''/>
             <div className='content-container absolute top-[70%] left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-20'>
                 <h2 className='py-2 px-4'>{title}</h2>
                 <h3 className='py-2 px-4'>{subtitle}</h3>
@@ -39,7 +39,7 @@ const ProjectDetails: React.FC<Props> = ({coverImg, title, subtitle, description
                 </div>
                 <p className='pb-4'>Technologies</p>
                 {children}
-                <Link href="/#projects">
+                <Link href="/#projects" passHref>
                     <div  className='flex items-center gap-2 my-12 cursor-pointer'><FiArrowLeft />Back</div>
                 </Link>
             </div>

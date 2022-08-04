@@ -85,7 +85,7 @@ const Navbar = () => {
                 <ul className='hidden md:flex'>
                     {navbarLinks.map(link => {
                         return (
-                            <Link key={link.key} href={link.url}>
+                            <Link key={link.key} href={link.url} passHref>
                                 <li className='ml-10 text-sm uppercase box-border border-b border-b-transparent hover:border-b-orange-500 ease-in duration-100'>{link.name}</li>
                             </Link>
                         );
@@ -117,14 +117,14 @@ const Navbar = () => {
                     <ul>
                         {navbarLinks.map(link => {
                             return (
-                                <Link key={link.key} href={link.url}>
+                                <Link key={link.key} href={link.url} passHref>
                                     <li className='uppercase py-4 text-sm' onClick={() => setNav(false)}>{link.name}</li>
                                 </Link>
                             );
                         })}
                     </ul>
                     <div className='pt-40'>
-                        <p className='tracking-widest uppercase '>Let's connect</p>
+                        <p className='tracking-widest uppercase '>Let&apos;s connect</p>
                         <SocialLinks />
                     </div>
                 </div>
