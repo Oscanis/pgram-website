@@ -1,7 +1,5 @@
 import React from 'react';
 
-import SocialLinks from '../components/SocialLinks';
-
 const ContactDetails = () => {
   return (
     <div>

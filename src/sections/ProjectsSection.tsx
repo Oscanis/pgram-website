@@ -17,6 +17,20 @@ const ProjectsSection = () => {
             />
 
             <ProjectCard
+                cardTitle='Köki Mall'
+                cardDetails='Backend'
+                imgUrl='/assets/koki-cover.png'
+                targetUrl='/projects/koki'
+            />
+
+            <ProjectCard
+                cardTitle='Marseus Webshop'
+                cardDetails='Website'
+                imgUrl='/assets/marseus-cover.png'
+                targetUrl='/projects/marseus'
+            />
+
+            <ProjectCard
                 cardTitle='Dőry Wedding'
                 cardDetails='Website'
                 imgUrl='/assets/dory-cover.png'
@@ -25,16 +39,9 @@ const ProjectsSection = () => {
 
             <ProjectCard
                 cardTitle='Vagrus'
-                cardDetails='Video & trailers'
+                cardDetails='Video &amp; trailers'
                 imgUrl='/assets/vagrus-cover.png'
                 targetUrl='/projects/vagrus'
-            />
-
-            <ProjectCard
-                cardTitle='Marseus Webshop'
-                cardDetails='Website'
-                imgUrl='/assets/marseus-cover.png'
-                targetUrl='/projects/marseus'
             />
 
             <ProjectCard

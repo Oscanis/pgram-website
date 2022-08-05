@@ -37,7 +37,7 @@ const ProjectDetails: React.FC<Props> = ({coverImg, title, subtitle, description
                         <button className='w-48' onClick={() => {window.open(githubUrl, '_blank')}}>Code</button>
                     }
                 </div>
-                <p className='pb-4'>Technologies</p>
+                <p className='pb-4 font-bold'>Technologies</p>
                 {children}
                 <Link href="/#projects" passHref>
                     <div  className='flex items-center gap-2 my-12 cursor-pointer'><FiArrowLeft />Back</div>

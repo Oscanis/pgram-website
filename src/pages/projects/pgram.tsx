@@ -20,15 +20,15 @@ const ProjectView = () => {
         description={description}
         githubUrl={githubUrl}
     >
-        <div className='flex gap-8'>
+        <div className='flex flex-column flex-wrap gap-8'>
             <div className='flex items-center gap-4'>
                 <SiReact /> React
             </div>
-            <span>|</span>
+            <span className='hidden lg:block'>|</span>
             <div className='flex items-center gap-4'>
                 <SiNextdotjs /> Next.js
             </div>
-            <span>|</span>
+            <span className='hidden lg:block'>|</span>
             <div className='flex items-center gap-4'>
                 <SiTailwindcss /> Tailwind
             </div>

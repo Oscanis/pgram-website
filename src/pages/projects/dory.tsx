@@ -20,11 +20,11 @@ const ProjectView = () => {
         description={description}
         siteUrl={siteUrl}
     >
-        <div className='flex gap-8'>
+        <div className='flex flex-column flex-wrap gap-8'>
             <div className='flex items-center gap-4'>
                 <FaWordpress /> Wordpress
             </div>
-            <span>|</span>
+            <span className='hidden lg:block'>|</span>
             <div className='flex items-center gap-4'>
                 <SiAdobephotoshop /> Photoshop
             </div>

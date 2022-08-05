@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <title>PGram - Web Development</title>
       <meta name='description' content='PGram portfolio website. Web development with React, NodeJS or Wordpress' />
-      <link rel='icon' href='/assets/pgram-favicon.ico' />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
     <Navbar />
     <Component {...pageProps} />
